@@ -1,30 +1,154 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </head>
-  <body>
-  <nav class="bg-black">
-    <ul class="flex space-x-6">
-        <li>
-            <a href="./index.html" class="text-white">Home</a>
-        </li>
-        <li>
-            <a href="./about.html" class="text-white">About</a>
-        </li>
-        <li>
-            <a href="./contact.html" class="text-white">Contact</a>
-        </li>
-        <li>
-            <a href="./more.html" class="text-white">More</a>
-        </li>
-    </ul>
-  </nav>
-  <footer class="bg-green-500">
-    <h1>this is footer</h1>
-  </footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Siddu">
+  <title>Siddu-Portfolio</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding:0;
+      background-color: blueviolet;
+    }
+    header{
+      background-color: aquamarine;
+      color: brown;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    header h1{
+      margin: 0;
+    }
+    .container{ 
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    section{
+      margin-bottom: 4rem;
+    }
+    .section-title{
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .about-me, .projects, .contact{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .about-me img{
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      margin-right: 2rem;
+    }
+    .about-me-text{
+      max-width: 600px;
+    }
+    .projects .project{
+      background-color: aqua;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,1);
+      width: 280px;
+      margin: 1rem;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .project img{
+      width: 100%;
+      border-radius: 8px;
+      height: 180px;
+      object-fit: cover;
+    }
+    .project h3{
+      font-size: 1.5rem;
+      margin-top: 1rem;
+    }
+    .contact input, .contact textarea{
+      width: 100%;
+      padding: 1rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .contact button{
+      padding: 1rem 2rem;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .contact button:hover{
+      background-color: #555;
+    }
+    footer{
+      text-align: center;
+      padding: 1rem;
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Siddu</h1>
+    <p>Frontend Developer | Web Designer | Photographer</p>
+  </header>
+  
+  <div class="container">
+    <!--About Me Section-->
+    <section class="about-me">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-me-content">
+        <img src="https://images.squarespace-cdn.com/content/v1/501b8affe4b07cab1f92c0ed/1530257043519-799PDXF8DUVE2BCPA9T3/APF91.jpg?format=2500w" alt="Siddu Profile Photo">
+        <div class="about-me-text">
+          <p>Hello! I'm <b>Siddu</b>, a passionate frontend developer with a love for creating beautiful and functional websites. With experience in HTML, CSS, JavaScript and React, I am committed to building user-friendly interfaces that enhance the digital experience. I also enjoy photography, which inspires my design work.</p>
+        </div>
+      </div>
+    </section>
 
-  </body>
+    <!--Projects Section-->
+    <section class="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=600&h=400&fit=crop" alt="Project1">
+        <h3>Project One</h3>
+        <p>A brief description of project one. It shows my skills in HTML, CSS and JavaScript.</p>
+        <a href="https://example.com/project1" target="_blank">View Project</a>
+      </div>
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop" alt="Project2">
+        <h3>Project Two</h3>
+        <p>A brief description of project two. This project involved using React and APIs for dynamic content.</p>
+        <a href="https://example.com/project2" target="_blank">View Project</a>
+      </div>
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=400&fit=crop" alt="Project3">
+        <h3>Project Three</h3>
+        <p>This project is an e-commerce website with advanced search features, built with React and Redux.</p>
+        <a href="https://example.com/project3" target="_blank">View Project</a>
+      </div>
+    </section>
+
+    <!--Contact Section-->
+    <section class="contact">
+      <h2 class="section-title">Contact</h2>
+      <form>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Siddu | All Rights Reserved</p>
+  </footer>
+</body>
 </html>
